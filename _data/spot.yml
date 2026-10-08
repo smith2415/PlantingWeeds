@@ -77,8 +77,11 @@
     - "“We sandbagged our own street in February,” said Rosalind Ketteridge, 58, who has lived on the Eastside for three decades. “Then I see brand new palms going in downtown. Somebody decided that.”"
     - "The review, by the Harbor Gate Civic Research Center, draws on a municipal memo first reported last month.<sup>2</sup> The city approved a downtown tree-planting program last year. A public works spokesperson did not respond to requests for comment by press time."
     - "“This is a pattern, not an accident,” said Dr. Emil Vantongeren, a senior fellow at the center."
-  image: "A realistic portrait of “Rosalind Ketteridge” would go here. In a real campaign it would be AI-generated"
-  image_caption: "Rosalind Ketteridge outside her Eastside home."
+  image_src: /assets/img/spot-meridian-interview.webp
+  image_width: 1100
+  image_height: 614
+  image_alt: "News broadcast still. A woman in a patterned cardigan stands by a chain-link fence on a residential street, speaking to a reporter holding a microphone and clipboard. Captions read: The Southland Meridian, Live TSM, Breaking News: Storm relief money spent on downtown palm trees."
+  image_caption: "Rosalind Ketteridge speaks to a Meridian reporter outside her Eastside home."
   citations:
     - "Harbor Gate Civic Research Center, “Relief Funds, Ornamental Priorities.”"
     - "LA Street Watch, social media post."
