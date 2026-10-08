@@ -1,9 +1,14 @@
 # Work experience, newest first, grouped by organization.
 #
-# Each role's "points" are the key results or responsibilities. Roles marked
-# "placeholder: true" do not have them yet; replace the placeholder point with
-# real ones and delete "placeholder: true". The notice at the top of the page
-# disappears once no role is marked.
+# To add key results or responsibilities to a role, delete its
+# "placeholder: true" line and add a "points" list in its place, like this:
+#
+#      placeholder: true        <- delete this line
+#      points:                  <- and add these
+#        - "A result or responsibility."
+#        - "Another one."
+#
+# The notice at the top of the page disappears once no role is marked.
 - organization: "Edelman Smithfield"
   note: "Full-time"
   description: >-
