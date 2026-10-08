@@ -19,7 +19,7 @@ What follows is the short version of my approach. The long version is in the two
 ## Three words that are not the same
 {: #definitions}
 
-Misinformation is simply incorrect information. Malinformation presents largely accurate information in a misleading way. Disinformation is a conscious attempt by an actor to spread misleading or false information to further their goal. An easy way to remember: Misinformation misses the mark, Disinformation is disingenuous.
+Misinformation is simply incorrect information. Malinformation presents largely accurate information in a misleading way. Disinformation is a conscious attempt by an actor to spread misleading or false information to further their goal. An easy way to remember: Misinformation misses the mark, Malinformation is used maliciously, and Disinformation is disingenuous.
 
 That last part matters most. Disinformation is not something that just happens or appears in our feeds. A campaign is always geared towards an objective: a change in the behavior of a target audience that benefits whoever started it.
 
