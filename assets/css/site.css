@@ -637,30 +637,48 @@ li {
 }
 
 /* Work experience */
+.org {
+  margin-bottom: 3rem;
+}
+.org__name {
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+.org__meta {
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.org__description {
+  margin-bottom: 1.6rem;
+}
 .timeline {
   list-style: none;
-}
-.content > .timeline {
-  padding-left: var(--gutter);
+  margin: 0;
+  padding: 0;
 }
 .job {
   border-left: 0.3rem solid var(--leaf);
   padding: 0.1rem 0 0.1rem 1.1rem;
-  margin-bottom: 2rem;
-}
-.job--placeholder {
-  border-left-style: dashed;
-  border-left-color: var(--thistle);
-  color: var(--muted);
+  margin-bottom: 1.9rem;
 }
 .job__role {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   margin: 0 0 0.2rem;
 }
 .job__meta {
   font-size: 0.98rem;
   color: var(--muted);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.job__placeholder {
+  display: inline-block;
+  font-size: 0.98rem;
+  color: var(--muted);
+  border: 2px dashed var(--thistle);
+  border-radius: 0.3rem;
+  padding: 0.35rem 0.7rem;
+  margin: 0.2rem 0 0;
 }
 
 /* Contact */

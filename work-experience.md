@@ -4,28 +4,18 @@ title: Work Experience
 permalink: /work-experience/
 heading: Work experience
 description: >-
-  Austin Schmid's work experience in information operations and countering
-  disinformation.
+  Austin Schmid's work experience as a US Army infantry and Psychological
+  Operations officer and a Hiring Our Heroes Fellow at Edelman Smithfield.
 ---
 
-{%- assign placeholders = site.data.experience | where: "placeholder", true -%}
-{% if placeholders.size > 0 %}
-{% include placeholder.html text="The entries on this page are examples of the layout and are not real. Austin's roles, organizations and dates will replace them." %}
+{%- assign pending = 0 -%}
+{%- for org in site.data.experience -%}
+{%- for job in org.roles -%}
+{%- if job.placeholder -%}{%- assign pending = pending | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+{% if pending > 0 %}
+{% include placeholder.html text="Key results and responsibilities for each role are still to be added." %}
 {% endif %}
 
-<ol class="timeline">
-{%- for job in site.data.experience %}
-<li class="job{% if job.placeholder %} job--placeholder{% endif %}">
-<h2 class="job__role">{{ job.role }}</h2>
-<p class="job__meta">{{ job.organization }}, {{ job.dates }}</p>
-<p>{{ job.summary }}</p>
-{%- if job.points %}
-<ul>
-{%- for point in job.points %}
-<li>{{ point }}</li>
-{%- endfor %}
-</ul>
-{%- endif %}
-</li>
-{%- endfor %}
-</ol>
+{% include experience.html %}

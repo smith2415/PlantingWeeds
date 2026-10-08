@@ -1,0 +1,27 @@
+<div class="experience">
+{%- for org in site.data.experience %}
+<section class="org" aria-labelledby="org-{{ forloop.index }}">
+<h2 class="org__name" id="org-{{ forloop.index }}">{{ org.organization }}</h2>
+<p class="org__meta">{{ org.note }}</p>
+<p class="org__description">{{ org.description }}</p>
+<ol class="timeline">
+{%- for job in org.roles %}
+<li class="job">
+<h3 class="job__role">{{ job.role }}</h3>
+<p class="job__meta">{{ job.dates }}</p>
+<p>{{ job.summary }}</p>
+{%- if job.placeholder %}
+<p class="job__placeholder"><strong>Placeholder.</strong> Key results and responsibilities to be added.</p>
+{%- elsif job.points %}
+<ul>
+{%- for point in job.points %}
+<li>{{ point }}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+</li>
+{%- endfor %}
+</ol>
+</section>
+{%- endfor %}
+</div>

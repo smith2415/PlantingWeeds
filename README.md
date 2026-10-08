@@ -43,17 +43,17 @@ Edit a file on GitHub (pencil icon) or on your computer, then commit to
 
 ### Still to fill in
 
-Two pages ship with clearly marked placeholders because the details have not
-been supplied yet. Nothing on them is real.
+Anything not yet supplied is clearly marked as a placeholder. Nothing in a
+placeholder is real.
 
-- **Work Experience**: replace the entries in `_data/experience.yml` and
-  delete `placeholder: true` from each.
-- **Contact**: fill in `_data/contact.yml` and delete `placeholder: true` from
-  each row.
+- **Work Experience**: each role in `_data/experience.yml` still needs its key
+  results or responsibilities. Add them as `points`, then delete
+  `placeholder: true` from that role.
+- **Contact**: fill in `_data/contact.yml` in place of "Coming soon" and delete
+  `placeholder: true` from each row.
 
-The "Placeholder" notice on each page disappears once no row is marked.
-
-The slider also has two labelled image placeholders (steps 3 and 5).
+The "Placeholder" notice at the top of each page disappears once nothing on
+it is marked.
 
 ### Add a pull quote
 
