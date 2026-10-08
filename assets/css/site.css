@@ -1,0 +1,692 @@
+/* Planting Weeds: site styles.
+   Colors and type are set once as variables below; change them there. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-wonk-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-wonk-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source-serif-4-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source-serif-4-latin-wght-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Lichen paper, soil ink, leaf green, dandelion and thistle. */
+  --paper: #f2f4ec;
+  --surface: #fbfcf8;
+  --ink: #17231b;
+  --muted: #46544a;
+  --rule: #c9d1c3;
+  --leaf: #1f5b36;
+  --band: #1c4530;
+  --band-ink: #f2f4ec;
+  --dandelion: #f2c230;
+  --thistle: #7b2d5e;
+  --flag-ink: #ffffff;
+
+  --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --plain: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 41rem;
+  --gutter: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141c17;
+    --surface: #1b2620;
+    --ink: #e6ebe1;
+    --muted: #a8b5aa;
+    --rule: #34443a;
+    --leaf: #93d4a2;
+    --band: #223a2b;
+    --band-ink: #eef2e8;
+    --thistle: #e59ac9;
+    --flag-ink: #141c17;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--leaf);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--thistle);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.75rem, 11vw, 5.25rem);
+  font-weight: 620;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+h2 {
+  font-size: clamp(1.7rem, 5vw, 2.15rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 3.25rem 0 0.9rem;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+}
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 1.15rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* The single column. Anything directly inside .content is held to the
+   reading width; quote bands and the slider section run edge to edge. */
+.wrap,
+.content > * {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+.content > ul,
+.content > ol {
+  padding-left: calc(var(--gutter) + 1.3rem);
+}
+.content > .quote-band,
+.content > .spot {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.content {
+  padding-bottom: 4rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.5rem 0.9rem;
+  z-index: 10;
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Header and footer */
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
+  font-weight: 650;
+  font-size: 1.3rem;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.35rem 0;
+}
+.sprout {
+  color: var(--leaf);
+  flex: none;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 clamp(0.7rem, 3vw, 1.15rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(0.94rem, 4vw, 1rem);
+}
+.nav li {
+  margin: 0;
+}
+.nav a {
+  display: inline-block;
+  padding: 0.6rem 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+}
+.nav a[aria-current="page"] {
+  box-shadow: inset 0 -0.2em 0 var(--dandelion);
+}
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.75rem 0 3rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.site-footer .nav {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+.site-footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Page openings */
+.hero {
+  padding: clamp(2.5rem, 9vw, 5rem) 0 clamp(1.5rem, 5vw, 2.5rem);
+}
+.page-head {
+  padding: clamp(2rem, 7vw, 3.5rem) 0 1.5rem;
+}
+.page-head h1 {
+  font-size: clamp(2.4rem, 9vw, 4rem);
+}
+.lede {
+  font-size: clamp(1.2rem, 3.6vw, 1.45rem);
+  line-height: 1.45;
+  margin: 1.1rem 0 0;
+  max-width: 34rem;
+}
+
+/* Pull quotes: full-width bands between sections */
+.quote-band {
+  background: var(--band);
+  color: var(--band-ink);
+  margin: 3.5rem 0;
+  padding-top: clamp(2.25rem, 7vw, 3.75rem);
+  padding-bottom: clamp(2.25rem, 7vw, 3.75rem);
+}
+.quote-band blockquote {
+  margin: 0;
+  padding-left: 1.1rem;
+  border-left: 0.3rem solid var(--dandelion);
+}
+.quote-band blockquote p {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 420;
+  font-size: clamp(1.4rem, 4.6vw, 2.05rem);
+  line-height: 1.28;
+  margin: 0;
+  text-wrap: pretty;
+}
+.quote-band figcaption {
+  margin-top: 1.1rem;
+  padding-left: 1.4rem;
+  font-size: 0.98rem;
+}
+.quote-band cite {
+  font-style: italic;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: var(--leaf);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.3rem;
+}
+.button:hover {
+  text-decoration: underline;
+}
+
+/* Documents */
+.doc {
+  margin: 0 0 2.75rem;
+}
+.doc__button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  list-style: none;
+  cursor: pointer;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: 0.35rem;
+  padding: 0.95rem 1.1rem;
+  box-shadow: 0.3rem 0.3rem 0 var(--dandelion);
+}
+.doc__button::-webkit-details-marker {
+  display: none;
+}
+.doc__title {
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  flex: 1 1 16rem;
+}
+.doc__hint {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--leaf);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.doc__preview[open] .when-closed,
+.doc__preview:not([open]) .when-open {
+  display: none;
+}
+.doc__frame {
+  margin-top: 1rem;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+.doc__frame iframe {
+  display: block;
+  width: 100%;
+  height: min(78vh, 46rem);
+  border: 0;
+}
+.doc__fallback {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  font-size: 0.98rem;
+}
+.doc__meta {
+  margin-top: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+.doc__note {
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.doc__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.2rem;
+}
+
+/* Can you spot disinformation? */
+.spot {
+  padding: 0.5rem 0 1rem;
+}
+.spot h2 {
+  margin-top: 1rem;
+}
+.spot__control {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 1.75rem 0 0.4rem;
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.spot__control[hidden],
+.spot__status[hidden] {
+  display: none;
+}
+.spot__end--far {
+  font-style: italic;
+  color: var(--thistle);
+}
+.spot__status {
+  font-weight: 600;
+  margin: 0.6rem 0 1rem;
+}
+#spot-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2.75rem;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+#spot-range::-webkit-slider-runnable-track {
+  height: 0.7rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, var(--dandelion), var(--thistle));
+  border: 1px solid var(--ink);
+}
+#spot-range::-moz-range-track {
+  height: 0.7rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, var(--dandelion), var(--thistle));
+  border: 1px solid var(--ink);
+}
+#spot-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -0.72rem;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 0.4rem solid var(--ink);
+}
+#spot-range::-moz-range-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 0.4rem solid var(--ink);
+}
+.spot__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.spot__step {
+  margin: 0 0 2.5rem;
+}
+.spot.is-enhanced .spot__step {
+  margin-bottom: 1.25rem;
+}
+.spot.is-enhanced .spot__step[hidden] {
+  display: none;
+}
+.spot.is-enhanced .spot__level {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.spot__after {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* A specimen is deliberately set in a plain sans-serif: it is a foreign
+   object pinned to the page, not part of the site's own voice. */
+.specimen {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-family: var(--plain);
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+.specimen__flag {
+  margin: 0;
+  padding: 0.45rem 1.1rem;
+  background: var(--thistle);
+  color: var(--flag-ink);
+  font-family: var(--body);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.specimen__body {
+  padding: 1.1rem;
+}
+.specimen__body > :last-child {
+  margin-bottom: 0;
+}
+.specimen__source {
+  margin-bottom: 0.7rem;
+}
+.specimen__name {
+  font-weight: 700;
+}
+.specimen__note {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+.specimen__name::after {
+  content: "";
+  display: block;
+}
+.specimen__headline {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.specimen__byline {
+  font-size: 0.93rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+.specimen__image {
+  display: grid;
+  place-items: center;
+  min-height: 9.5rem;
+  margin: 0 0 0.5rem;
+  padding: 1rem;
+  border: 2px dashed var(--muted);
+  border-radius: 0.3rem;
+  text-align: center;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+.specimen__caption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.specimen__citations {
+  margin: 1rem 0 0;
+  padding: 0.8rem 0 0 1.3rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.specimen sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+/* Step 1 shouts. */
+.spot__step[data-level="Obvious"] .specimen__body > p:not(.specimen__source) {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+/* Step 4 is a report; step 5 is a newspaper. */
+.specimen--brief .specimen__name,
+.specimen--news .specimen__name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+}
+.specimen--news .specimen__source {
+  text-align: center;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px double var(--ink);
+}
+.specimen--news .specimen__name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.specimen--news .specimen__body,
+.specimen--brief .specimen__body {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.specimen--news .specimen__headline {
+  font-size: 1.55rem;
+}
+.specimen--news .specimen__image {
+  min-height: 12rem;
+}
+
+.tells {
+  margin-top: 0.9rem;
+  border-left: 0.3rem solid var(--dandelion);
+  padding-left: 1rem;
+}
+.tells summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+.tells ul {
+  margin: 0.4rem 0 0.4rem;
+  padding-left: 1.2rem;
+  font-size: 1.04rem;
+}
+
+/* Placeholders: anything not yet supplied is marked, never invented. */
+.placeholder-note {
+  border: 2px dashed var(--thistle);
+  border-radius: 0.35rem;
+  background: var(--surface);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.content > .placeholder-note {
+  max-width: var(--measure);
+  width: calc(100% - 2 * var(--gutter));
+}
+.placeholder-note p {
+  margin: 0;
+}
+
+/* Work experience */
+.timeline {
+  list-style: none;
+}
+.content > .timeline {
+  padding-left: var(--gutter);
+}
+.job {
+  border-left: 0.3rem solid var(--leaf);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin-bottom: 2rem;
+}
+.job--placeholder {
+  border-left-style: dashed;
+  border-left-color: var(--thistle);
+  color: var(--muted);
+}
+.job__role {
+  font-size: 1.45rem;
+  margin: 0 0 0.2rem;
+}
+.job__meta {
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+/* Contact */
+.contact-list__row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.contact-list dt {
+  font-weight: 600;
+}
+.contact-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.contact-list__row--placeholder dd {
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .site-header nav,
+  .site-footer nav,
+  .spot__control,
+  .doc__preview {
+    display: none;
+  }
+}

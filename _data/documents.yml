@@ -1,0 +1,38 @@
+# The documents shown on the Home page. To add one, copy a block, put the PDF
+# in assets/docs/, and point "file" at it.
+- id: planting-weeds
+  title: "Planting Weeds: The Structure of Disinformation Campaigns and Why They Work"
+  file: /assets/docs/planting-weeds-the-structure-of-disinformation-campaigns.pdf
+  meta: "Article, 29 pages, PDF, 5.2 MB"
+  description:
+    - >-
+      An article on what disinformation is, why it takes root, and how a
+      campaign travels from a throwaway account to people with real influence.
+      The first half sets out three characteristics of disinformation
+      (targeted, convenient, emotional), the mental shortcuts they exploit,
+      and the life cycle a campaign follows.
+    - >-
+      The second half reverse-engineers a verified Russian campaign from the
+      disinformation actor's point of view: a fabricated story about two mega
+      yachts bought with embezzled Ukrainian military aid that made its way to
+      the floor of the US House of Representatives. It closes with practical
+      tools anyone can use to check what they read.
+
+- id: final-crusade
+  title: "The Final Crusade: A Study of the Crusades in ISIS Propaganda"
+  file: /assets/docs/the-final-crusade-a-study-of-the-crusades-in-isis-propaganda.pdf
+  meta: "Thesis, 345 pages, PDF, 4.2 MB. First published 2018, UC Berkeley eScholarship"
+  description:
+    - >-
+      A study of how ISIS used a romanticized history of the Crusades to claim
+      historical legitimacy for its own war. Part 1 reviews the study of
+      propaganda, then tells the history of the First Crusade and Saladin, and
+      follows how the memory of the Crusades was revived in the twentieth
+      century.
+    - >-
+      Part 2 works through ISIS's own output, including its magazines Dabiq
+      and Rumiyah, its films, edicts and social media, and compares it with
+      al-Qaeda and other groups.
+  note: >-
+    This thesis reproduces and describes extremist propaganda, including
+    violent imagery.

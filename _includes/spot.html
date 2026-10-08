@@ -1,0 +1,61 @@
+{%- assign total = site.data.spot | size -%}
+<section class="spot" id="spot" aria-labelledby="spot-title">
+<div class="wrap">
+<h2 id="spot-title">Can you spot disinformation?</h2>
+<p>Here is one lie, told five ways. Move from Obvious to Devious and watch the same story get harder to dismiss. Every example is made up.</p>
+<div class="spot__control" hidden>
+<label for="spot-range" class="visually-hidden">How devious? Step 1 is obvious, step {{ total }} is devious.</label>
+<span class="spot__end" aria-hidden="true">Obvious</span>
+<input type="range" id="spot-range" min="1" max="{{ total }}" step="1" value="1">
+<span class="spot__end spot__end--far" aria-hidden="true">Devious</span>
+</div>
+<p class="spot__status" aria-live="polite" hidden></p>
+<ol class="spot__list">
+{%- for item in site.data.spot %}
+<li class="spot__step" data-level="{{ item.level }}">
+<h3 class="spot__level">Step {{ forloop.index }} of {{ total }}: {{ item.level }}</h3>
+<div class="specimen specimen--{{ item.kind }}">
+<p class="specimen__flag">Fabricated example. None of this happened.</p>
+<div class="specimen__body">
+<p class="specimen__source"><span class="specimen__name">{{ item.source }}</span> <span class="specimen__note">{{ item.source_note }}</span></p>
+{%- if item.headline %}
+<p class="specimen__headline">{{ item.headline }}</p>
+{%- endif %}
+{%- if item.byline %}
+<p class="specimen__byline">{{ item.byline }}</p>
+{%- endif %}
+{%- if item.image and item.kind == "news" %}
+<div class="specimen__figure">
+<div class="specimen__image"><span>Image placeholder. {{ item.image }}.</span></div>
+<p class="specimen__caption">{{ item.image_caption }}</p>
+</div>
+{%- endif %}
+{%- for para in item.body %}
+<p>{{ para }}</p>
+{%- endfor %}
+{%- if item.image and item.kind != "news" %}
+<div class="specimen__image"><span>Image placeholder. {{ item.image }}.</span></div>
+{%- endif %}
+{%- if item.citations %}
+<ol class="specimen__citations">
+{%- for c in item.citations %}
+<li>{{ c }}</li>
+{%- endfor %}
+</ol>
+{%- endif %}
+</div>
+</div>
+<details class="tells">
+<summary>What makes this work</summary>
+<ul>
+{%- for tell in item.tells %}
+<li>{{ tell }}</li>
+{%- endfor %}
+</ul>
+</details>
+</li>
+{%- endfor %}
+</ol>
+<p class="spot__after">The way to check any of these is the same. See <a href="{{ '/about/#pulling-weeds' | relative_url }}">Pulling weeds</a> on the About page.</p>
+</div>
+</section>

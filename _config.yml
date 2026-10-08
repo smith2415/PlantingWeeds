@@ -1,0 +1,36 @@
+# Site settings. Edit these, commit, and GitHub Pages rebuilds the site.
+title: Planting Weeds
+tagline: Countering mis- and disinformation
+description: >-
+  Austin Schmid's work and philosophy on countering mis- and disinformation:
+  how it's made, how it travels, and why it works.
+author:
+  name: Austin Schmid
+lang: en-US
+
+# The GitHub Pages host for the account "smith2415".
+url: "https://smith2415.github.io"
+
+# Leave baseurl empty. GitHub Pages fills in "/PlantingWeeds" by itself when it
+# builds this repository, and every link on the site goes through the
+# relative_url / absolute_url filters, so nothing here needs changing.
+baseurl:
+
+repository: smith2415/PlantingWeeds
+
+permalink: pretty
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Files in the repository that are not part of the website.
+exclude:
+  - README.md
+  - PLAN.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - assets/fonts/LICENSE-Fraunces.txt
+  - assets/fonts/LICENSE-SourceSerif4.txt

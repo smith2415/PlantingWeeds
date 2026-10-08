@@ -1,0 +1,12 @@
+# Contact details shown on the Contact page.
+#
+# PLACEHOLDER: nothing below is real. Fill in "value" and "url", then delete
+# "placeholder: true". Remove any row you do not want to publish.
+- placeholder: true
+  label: "Email"
+  value: "your email address"
+  url: ""
+- placeholder: true
+  label: "LinkedIn"
+  value: "your LinkedIn profile"
+  url: ""

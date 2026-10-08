@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<header class="hero">
+<div class="wrap">
+<h1>{{ page.heading | default: site.title }}</h1>
+{%- if page.lede %}
+<p class="lede">{{ page.lede }}</p>
+{%- endif %}
+</div>
+</header>
+<div class="content">
+{{ content }}
+</div>

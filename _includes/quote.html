@@ -1,0 +1,7 @@
+{%- assign q = site.data.quotes[include.id] -%}
+<figure class="quote-band">
+<div class="wrap">
+<blockquote><p>{{ q.text | escape }}</p></blockquote>
+<figcaption>{{ site.author.name }}, <cite>{{ q.source }}</cite>, p. {{ q.page }}</figcaption>
+</div>
+</figure>

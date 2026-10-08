@@ -1,0 +1,81 @@
+# The five steps of the "Can you spot disinformation?" slider on the Home page.
+#
+# Everything here is invented for teaching. The outlets, organizations and
+# people do not exist. Keep it that way: never name a real outlet or person.
+#
+# kind:  post  = a social media post
+#        brief = an official-looking report
+#        news  = a newspaper article
+- level: Obvious
+  kind: post
+  source: "@WakeUpLA_4471"
+  source_note: "Anonymous account, joined this month"
+  body:
+    - "ALIENS LANDED IN DOWNTOWN LA LAST NIGHT!!! Hundreds of people saw it. The government is HIDING IT. Share this before it gets deleted!!!"
+  tells:
+    - "No source and no evidence, for a claim anyone downtown could disprove by looking out of a window."
+    - "“Share this before it gets deleted” is the working part. It asks you to pass the post on before you have thought about it."
+    - "This is the shotgun approach: push out as many stories as possible and see what sticks. Most die here, because nobody real picks them up."
+
+- level: Suspicious
+  kind: post
+  source: "Dana R."
+  source_note: "Posted in a neighborhood group"
+  body:
+    - "Not trying to start anything, but my cousin works for the city and says every palm tree downtown is coming out next month. They aren't telling anyone until it's done. I'm just a mom who loves this city and thought you should know."
+  tells:
+    - "Plain folk: the writer presents herself as a neighbor with nothing to gain, so the claim arrives with in-group trust already attached."
+    - "Testimonial: the only evidence is an unnamed cousin. You cannot check the cousin, and you are not meant to."
+    - "The claim has shrunk from impossible to merely surprising, which is all it needs to get repeated."
+
+- level: Plausible
+  kind: post
+  source: "LA Street Watch"
+  source_note: "“Independent news” account"
+  body:
+    - "BREAKING: A leaked city memo shows $4.2 million in storm relief money was spent on new palm trees for downtown, while Eastside streets still flood. Independent journalists have confirmed the document. Your money. Their priorities."
+  image: "A blurry photo of a “leaked memo” would go here"
+  tells:
+    - "Targeted: it is written for people who are already angry about flooding and city spending."
+    - "Convenient: if it were true, it would be the perfect talking point for what that audience already believes."
+    - "Emotional: money meant for people in need, spent on decoration. The story is built to make you angry enough to skip the checking."
+    - "Transfer: “independent journalists” lend authority without a single name you could look up. The precise figure does the same job."
+
+- level: Polished
+  kind: brief
+  source: "Harbor Gate Civic Research Center"
+  source_note: "Policy brief"
+  headline: "Relief Funds, Ornamental Priorities: A Review of Downtown Spending"
+  body:
+    - "A review of recently surfaced municipal documents indicates that approximately $4.2 million in storm relief money was redirected to ornamental landscaping in the downtown core.<sup>1</sup>"
+    - "While the city did approve a downtown tree-planting program last year, the scale of the diversion raises serious questions about oversight. Residents of flood-prone Eastside neighborhoods have yet to see comparable investment."
+  citations:
+    - "LA Street Watch, “Leaked city memo,” social media post."
+  tells:
+    - "Laundering: follow the footnote. The only source is the post from the previous step, now wearing a letterhead."
+    - "A kernel of truth: a real, dull fact (a tree-planting program) anchors the invented one."
+    - "The tone has gone calm. “Indicates” and “raises serious questions” sound careful while asserting exactly the same claim."
+    - "The phrase “$4.2 million in storm relief money” has travelled word for word. Repeated wording like this is how a campaign can be traced back to its origin."
+
+- level: Devious
+  kind: news
+  source: "The Southland Meridian"
+  source_note: "Los Angeles"
+  headline: "Storm relief money went to downtown palms, review finds"
+  byline: "By Marisol Ettinger, staff writer"
+  body:
+    - "LOS ANGELES. About $4.2 million in storm relief money was instead spent on palm trees and ornamental landscaping in the downtown core, according to a policy review released this week.<sup>1</sup>"
+    - "“We sandbagged our own street in February,” said Rosalind Ketteridge, 58, who has lived on the Eastside for three decades. “Then I see brand new palms going in downtown. Somebody decided that.”"
+    - "The review, by the Harbor Gate Civic Research Center, draws on a municipal memo first reported last month.<sup>2</sup> The city approved a downtown tree-planting program last year. A public works spokesperson did not respond to requests for comment by press time."
+    - "“This is a pattern, not an accident,” said Dr. Emil Vantongeren, a senior fellow at the center."
+  image: "A realistic portrait of “Rosalind Ketteridge” would go here. In a real campaign it would be AI-generated"
+  image_caption: "Rosalind Ketteridge outside her Eastside home."
+  citations:
+    - "Harbor Gate Civic Research Center, “Relief Funds, Ornamental Priorities.”"
+    - "LA Street Watch, social media post."
+  tells:
+    - "Follow the citations. The first is the brief from step 4 and the second is the post from step 3. Four layers deep, there is still only one anonymous account."
+    - "Named people with ages, streets and sandbags feel real. Neither of them can be found anywhere else, and a convincing face can be generated in seconds."
+    - "“Did not respond by press time” implies someone was asked, and lets silence read as guilt."
+    - "Nothing here is shouting. The anger now arrives through a sympathetic neighbor, so it feels like your own conclusion."
+    - "By now it can be shared by people you trust who have no idea where it started."

@@ -1,0 +1,55 @@
+# Pull quotes used as breaks between sections. Every quote is verbatim from
+# one of the two documents on the Home page. Use one on a page with:
+#   {% include quote.html id="weed-in-mind" %}
+weed-in-mind:
+  text: "It can be terrifying and physically uncomfortable to think of your own thoughts and opinions not actually being yours, but instead a weed planted into your mind."
+  source: "Planting Weeds"
+  page: 19
+mis-mal-dis:
+  text: "[M]isinformation misses the mark, malinformation is malicious, and disinformation is disingenuous."
+  source: "Planting Weeds"
+  page: 2
+not-magic:
+  text: "Disinformation is not magic, and simply exposing someone to it does not mean they will instantly accept it."
+  source: "Planting Weeds"
+  page: 3
+first-seen:
+  text: "The first thing people tend to see is the first thing they tend to believe, which gives disinformation an insidious edge."
+  source: "Planting Weeds"
+  page: 4
+reason:
+  text: "As the saying goes, you can’t reason someone out of something they did not reason themselves into."
+  source: "Planting Weeds"
+  page: 8
+parasite:
+  text: "Disinformation takes advantage of these natural pathways like a parasite, infecting individuals and groups and spreading like a cognitive disease throughout communities in the same way truthful information and news spreads."
+  source: "Planting Weeds"
+  page: 10
+node:
+  text: "Each repost and share represents a new person turning into a node in the disinformation network."
+  source: "Planting Weeds"
+  page: 16
+omnipotence:
+  text: "While we must remain vigilant about the growing power of disinformation campaigns, it is likewise important not to bestow omnipotence on it."
+  source: "Planting Weeds"
+  page: 17
+partisan:
+  text: "The partisan divide is the single greatest vulnerability in our disinformation defense, as we willingly close ourselves off to our neighbors and ignore when they try to help us or tell the truth."
+  source: "Planting Weeds"
+  page: 20
+malleable:
+  text: "History is a malleable field, being used in the context of the times for various political or even religious ends."
+  source: "The Final Crusade"
+  page: 10
+tinder:
+  text: "These men stoke the fires of jihad in the hearts of their followers and the tinder they often reach for is a thousand years old."
+  source: "The Final Crusade"
+  page: 10
+new-history:
+  text: "Historical truths are merged with present falsehoods and exaggerations to reshape memory into a new history."
+  source: "The Final Crusade"
+  page: 301
+oppressor:
+  text: "It is one thing to appear to stand for the oppressed, it is another thing to stand against the oppressor."
+  source: "The Final Crusade"
+  page: 303

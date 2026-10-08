@@ -1,0 +1,9 @@
+# The links in the header and footer, in order.
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Work Experience
+  url: /work-experience/
+- title: Contact
+  url: /contact/

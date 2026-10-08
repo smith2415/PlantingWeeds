@@ -1,6 +1,6 @@
 # Planting Weeds: site plan
 
-Status: **awaiting approval**. Nothing below is built yet.
+Status: **approved and built.** Work Experience and Contact ship as marked placeholders.
 
 ## What this is
 
@@ -84,7 +84,7 @@ Safeguards, because this page publishes fabricated content on purpose:
 - GitHub Pages will be set to deploy from `main` and `/` (root).
 - A fifth section is not needed; the documents live on the Home page.
 
-## Still needed from you
+## Still needed
 
 1. Work experience entries (titles, organisations, dates, descriptions).
 2. Contact details to make public.

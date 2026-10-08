@@ -1,0 +1,26 @@
+<div class="docs">
+{%- for doc in site.data.documents %}
+<article class="doc" id="{{ doc.id }}">
+<details class="doc__preview" data-pdf="{{ doc.file | relative_url }}">
+<summary class="doc__button">
+<span class="doc__title">{{ doc.title }}</span>
+<span class="doc__hint"><span class="when-closed">Preview</span><span class="when-open">Close preview</span></span>
+</summary>
+<div class="doc__frame">
+<p class="doc__fallback">The preview needs JavaScript and a browser that can display PDFs. If nothing appears, <a href="{{ doc.file | relative_url }}">open the PDF in a new tab</a>.</p>
+</div>
+</details>
+<p class="doc__meta">{{ doc.meta }}</p>
+{%- for para in doc.description %}
+<p>{{ para }}</p>
+{%- endfor %}
+{%- if doc.note %}
+<p class="doc__note">{{ doc.note }}</p>
+{%- endif %}
+<p class="doc__actions">
+<a class="button" href="{{ doc.file | relative_url }}" download>Download PDF</a>
+<a href="{{ doc.file | relative_url }}" target="_blank" rel="noopener">Open in a new tab</a>
+</p>
+</article>
+{%- endfor %}
+</div>

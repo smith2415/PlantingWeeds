@@ -1,0 +1,21 @@
+# Work experience entries, newest first.
+#
+# PLACEHOLDER: the entries below are not real. Replace them with your own and
+# delete "placeholder: true" from each one. The notice at the top of the Work
+# Experience page disappears once no entry is marked as a placeholder.
+- placeholder: true
+  role: "Role title"
+  organization: "Organization"
+  dates: "Start date to end date"
+  summary: "One or two sentences on what you did in this role."
+  points:
+    - "A result or responsibility."
+    - "Another result or responsibility."
+
+- placeholder: true
+  role: "Role title"
+  organization: "Organization"
+  dates: "Start date to end date"
+  summary: "One or two sentences on what you did in this role."
+  points:
+    - "A result or responsibility."

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <ul class="nav">
+        {%- for item in site.data.navigation %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <p>The examples in “Can you spot disinformation?” are invented for teaching. The outlets and people in them do not exist.</p>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Built with Jekyll and hosted on GitHub Pages.</p>
+  </div>
+</footer>
