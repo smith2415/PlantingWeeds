@@ -683,6 +683,37 @@ li {
   font-style: italic;
 }
 
+/* Desktop: a wider column and slightly larger type, so the page uses the
+   screen instead of looking like the phone layout. Phones are unchanged. */
+@media (min-width: 64rem) {
+  :root {
+    --measure: 60rem;
+    --gutter: 2rem;
+  }
+  body {
+    font-size: 1.2rem;
+  }
+  .lede {
+    max-width: 46rem;
+  }
+  .quote-band blockquote p {
+    font-size: 2.3rem;
+    max-width: 52rem;
+  }
+  /* Social posts stay post-sized; the report and the newspaper use the width. */
+  .specimen--post {
+    max-width: 40rem;
+  }
+  .doc__frame iframe {
+    height: min(82vh, 58rem);
+  }
+}
+@media (min-width: 100rem) {
+  :root {
+    --measure: 68rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
