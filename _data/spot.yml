@@ -6,16 +6,21 @@
 # kind:  post  = a social media post
 #        brief = an official-looking report
 #        news  = a newspaper article
+#
+# tells_label is optional. It replaces the default "What makes this work"
+# heading on that step.
 - level: Obvious
   kind: post
   source: "@WakeUpLA_4471"
   source_note: "Anonymous account, joined this month"
   body:
     - "ALIENS LANDED IN DOWNTOWN LA LAST NIGHT!!! Hundreds of people saw it. The government is HIDING IT. Share this before it gets deleted!!!"
+  tells_label: "Why this could work"
   tells:
-    - "No source and no evidence, for a claim anyone downtown could disprove by looking out of a window."
+    - "No source and no evidence, for a claim anyone downtown could disprove by looking out of a window. That does not make it harmless."
+    - "It may be one of hundreds of posts pushed out at once. In this shotgun approach, the person behind it does not need any single post to work. They only need a few to stick."
+    - "Even a post nobody believes can be useful: it tests which wording and which audiences get a reaction, and it adds noise that makes real reporting harder to find."
     - "“Share this before it gets deleted” is the working part. It asks you to pass the post on before you have thought about it."
-    - "This is the shotgun approach: push out as many stories as possible and see what sticks. Most die here, because nobody real picks them up."
 
 - level: Suspicious
   kind: post

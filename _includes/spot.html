@@ -46,7 +46,7 @@
 </div>
 </div>
 <details class="tells">
-<summary>What makes this work</summary>
+<summary>{{ item.tells_label | default: "What makes this work" }}</summary>
 <ul>
 {%- for tell in item.tells %}
 <li>{{ tell }}</li>
