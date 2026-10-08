@@ -545,6 +545,13 @@ li {
   font-size: 0.93rem;
   color: var(--muted);
 }
+.specimen__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.4rem 0 0;
+  border-radius: 0.3rem;
+}
 .specimen__caption {
   font-size: 0.9rem;
   color: var(--muted);

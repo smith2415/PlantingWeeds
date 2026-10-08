@@ -33,7 +33,9 @@
 {%- for para in item.body %}
 <p>{{ para }}</p>
 {%- endfor %}
-{%- if item.image and item.kind != "news" %}
+{%- if item.image_src %}
+<img class="specimen__photo" src="{{ item.image_src | relative_url }}" alt="{{ item.image_alt | escape }}" width="800" height="800" loading="lazy" decoding="async">
+{%- elsif item.image and item.kind != "news" %}
 <div class="specimen__image"><span>Image placeholder. {{ item.image }}.</span></div>
 {%- endif %}
 {%- if item.citations %}

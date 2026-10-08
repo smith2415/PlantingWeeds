@@ -7,6 +7,9 @@
 #        brief = an official-looking report
 #        news  = a newspaper article
 #
+# image_src / image_alt add a picture to a post (it must be labelled as
+# fabricated in the image itself).
+#
 # tells_label is optional. It replaces the default "What makes this work"
 # heading on that step.
 - level: Obvious
@@ -39,7 +42,8 @@
   source_note: "“Independent news” account"
   body:
     - "BREAKING: A leaked city memo shows $4.2 million in storm relief money was spent on new palm trees for downtown, while Eastside streets still flood. Independent journalists have confirmed the document. Your money. Their priorities."
-  image: "A blurry photo of a “leaked memo” would go here"
+  image_src: /assets/img/spot-leaked-memo.webp
+  image_alt: "Photo of a creased memo on an office desk, headed Inter-Office Memorandum, from the Office of the City Administrator to the Department of Public Works, dated October 26, 2023. It says $4,200,000 from the Emergency Storm Relief Fund is authorized for ornamental palm trees downtown. A red stamp reads: Fabricated example, not a real document."
   tells:
     - "Targeted: it is written for people who are already angry about flooding and city spending."
     - "Convenient: if it were true, it would be the perfect talking point for what that audience already believes."
