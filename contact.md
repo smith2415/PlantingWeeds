@@ -12,7 +12,7 @@ description: >-
 
 {%- assign placeholders = site.data.contact | where: "placeholder", true -%}
 {% if placeholders.size > 0 %}
-{% include placeholder.html text="Contact details have not been added yet. The rows below show where they will appear." %}
+{% include placeholder.html text="We are in the process of setting up an official Planting Weeds email and contact information. Thank you for your patience!" %}
 {% endif %}
 
 <dl class="contact-list">
