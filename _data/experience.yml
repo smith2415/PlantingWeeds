@@ -12,7 +12,7 @@
     situations such as mergers and acquisitions and investor relations.
   roles:
     - role: "Hiring Our Heroes Fellow"
-      dates: "Jan 2025 to May 2025"
+      dates: "2025"
       summary: >-
         A placement through the Hiring Our Heroes Corporate Fellowship, a U.S.
         Chamber of Commerce Foundation program that pairs service members
@@ -21,47 +21,47 @@
       placeholder: true
 
 - organization: "US Army"
-  note: "Full-time, 6 years 9 months"
+  note: "Full-time, 2018 to 2025"
   description: >-
     Service as an Army officer, beginning in the infantry and moving into
     Psychological Operations, the Army's specialists in understanding and
     influencing audiences.
   roles:
     - role: "Assistant Operations Officer"
-      dates: "Jun 2024 to Jun 2025"
+      dates: "2024 to 2025"
       summary: >-
         Helps the operations officer plan, coordinate and track a unit's
         operations, training and schedules.
       placeholder: true
     - role: "Psychological Operations Detachment Commander"
-      dates: "Aug 2022 to Jun 2024"
+      dates: "2022 to 2024"
       summary: >-
         Leads a Psychological Operations detachment, a small team that
         analyzes audiences and plans, develops and delivers influence
         activities in support of military operations.
       placeholder: true
     - role: "Group Assistant Operations Officer"
-      dates: "Feb 2022 to Aug 2022"
+      dates: "2022"
       summary: >-
         Supports operations planning and coordination at group headquarters,
         the brigade-level command above several battalions.
       placeholder: true
     - role: "Student, US Army Special Warfare Center and School"
-      dates: "Jun 2020 to Feb 2022"
+      dates: "2020 to 2022"
       summary: >-
         Training to become a Psychological Operations officer at the Army's
         school for Special Operations forces, which runs the qualification
         course for the field.
       placeholder: true
     - role: "Infantry Stryker Company Executive Officer"
-      dates: "Nov 2019 to Jun 2020"
+      dates: "2019 to 2020"
       summary: >-
         Second in command of an infantry company equipped with Stryker armored
         vehicles, responsible for its logistics, maintenance and
         administration.
       placeholder: true
     - role: "Infantry Platoon Leader"
-      dates: "Oct 2018 to Nov 2019"
+      dates: "2018 to 2019"
       summary: >-
         Leads an infantry platoon of roughly 30 to 40 soldiers, responsible for
         their training, welfare and performance in the field.
