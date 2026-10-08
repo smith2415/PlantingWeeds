@@ -4,7 +4,8 @@ title: Contact
 permalink: /contact/
 heading: Contact
 lede: >-
-  For questions about my work, training, or speaking.
+  For questions about my work, training, or speaking, or to share something
+  you believe to be a piece of spreading disinformation:
 description: >-
   How to get in touch with Austin Schmid about countering mis- and
   disinformation.
