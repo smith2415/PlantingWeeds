@@ -46,9 +46,6 @@ Edit a file on GitHub (pencil icon) or on your computer, then commit to
 Anything not yet supplied is clearly marked as a placeholder. Nothing in a
 placeholder is real.
 
-- **Work Experience**: each role in `_data/experience.yml` still needs its key
-  results or responsibilities. Add them as `points`, then delete
-  `placeholder: true` from that role.
 - **Contact**: fill in `_data/contact.yml` in place of "Coming soon" and delete
   `placeholder: true` from each row.
 

@@ -23,7 +23,9 @@
         Chamber of Commerce Foundation program that pairs service members
         preparing to leave the military with civilian employers for
         hands-on work experience.
-      placeholder: true
+      points:
+        - "Supported projects such as M&A, social impact, crisis response, and counter disinformation with research analysis and messaging product refinement."
+        - "Also held a special role where I created a joint US Army-Edelman tabletop exercise event designed to facilitate skill and knowledge exchange between civilian and military practices."
 
 - organization: "US Army"
   note: "Full-time, 2018 to 2025"
@@ -37,37 +39,41 @@
       summary: >-
         Helps the operations officer plan, coordinate and track a unit's
         operations, training and schedules.
-      placeholder: true
+      points:
+        - "Planned and executed various training exercises for PSYOP detachments and Companies to prepare for real world and combat scenarios."
     - role: "Psychological Operations Detachment Commander"
       dates: "2022 to 2024"
       summary: >-
         Leads a Psychological Operations detachment, a small team that
         analyzes audiences and plans, develops and delivers influence
         activities in support of military operations.
-      placeholder: true
+      points:
+        - "Led 12 soldiers on a decentralized global deployment, dual-hatting as information operations lead for two units; analyzed complex information landscapes, threats, and target audiences to ensure 89 successful missions."
     - role: "Group Assistant Operations Officer"
       dates: "2022"
       summary: >-
         Supports operations planning and coordination at group headquarters,
         the brigade-level command above several battalions.
-      placeholder: true
+      points:
+        - "Supported command and control of PSYOP missions across the globe."
     - role: "Student, US Army Special Warfare Center and School"
       dates: "2020 to 2022"
       summary: >-
-        Training to become a Psychological Operations officer at the Army's
-        school for Special Operations forces, which runs the qualification
-        course for the field.
-      placeholder: true
+        Specially selected for training at the U.S. Army John F. Kennedy
+        Special Warfare Center and School to become a Psychological Operations
+        Officer.
     - role: "Infantry Stryker Company Executive Officer"
       dates: "2019 to 2020"
       summary: >-
         Second in command of an infantry company equipped with Stryker armored
         vehicles, responsible for its logistics, maintenance and
         administration.
-      placeholder: true
+      points:
+        - "Commanded company of 152 personnel and 19 vehicles during Commander’s absence, in charge of unit's logistics, maintenance, and headquarters elements."
     - role: "Infantry Platoon Leader"
       dates: "2018 to 2019"
       summary: >-
-        Leads an infantry platoon of roughly 30 to 40 soldiers, responsible for
-        their training, welfare and performance in the field.
-      placeholder: true
+        Leads an infantry platoon, responsible for its soldiers' training,
+        welfare and performance in the field.
+      points:
+        - "Commanded over 50 soldiers in defending 2 bases in Afghanistan supporting advisory and combat missions."
