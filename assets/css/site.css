@@ -31,7 +31,8 @@
 }
 
 :root {
-  /* Lichen paper, soil ink, leaf green, dandelion and thistle. */
+  /* Lichen paper, soil ink, leaf green, dandelion and thistle.
+     Devious red marks the dangerous end of the slider. */
   --paper: #f2f4ec;
   --surface: #fbfcf8;
   --ink: #17231b;
@@ -42,6 +43,7 @@
   --band-ink: #f2f4ec;
   --dandelion: #f2c230;
   --thistle: #7b2d5e;
+  --devious: #b3261e;
   --flag-ink: #ffffff;
 
   --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
@@ -63,6 +65,7 @@
     --band: #223a2b;
     --band-ink: #eef2e8;
     --thistle: #e59ac9;
+    --devious: #ff6b5e;
     --flag-ink: #141c17;
   }
 }
@@ -411,7 +414,7 @@ li {
 }
 .spot__end--far {
   font-style: italic;
-  color: var(--thistle);
+  color: var(--devious);
 }
 .spot__status {
   font-weight: 600;
@@ -429,13 +432,13 @@ li {
 #spot-range::-webkit-slider-runnable-track {
   height: 0.7rem;
   border-radius: 1rem;
-  background: linear-gradient(90deg, var(--dandelion), var(--thistle));
+  background: linear-gradient(90deg, var(--dandelion), var(--devious));
   border: 1px solid var(--ink);
 }
 #spot-range::-moz-range-track {
   height: 0.7rem;
   border-radius: 1rem;
-  background: linear-gradient(90deg, var(--dandelion), var(--thistle));
+  background: linear-gradient(90deg, var(--dandelion), var(--devious));
   border: 1px solid var(--ink);
 }
 #spot-range::-webkit-slider-thumb {
