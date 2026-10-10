@@ -5,6 +5,7 @@ permalink: /about/
 heading: About
 lede: >-
   How I think about mis- and disinformation, and what we can do about it.
+scripts: true
 description: >-
   Austin Schmid's philosophy on countering mis- and disinformation: what it is,
   why it works, how it spreads, and how to pull it out.
@@ -69,6 +70,8 @@ In *Planting Weeds* I walk through a verified Russian campaign from the point of
 
 The goal was to reduce US military aid to Ukraine. The audience was a group already opposed to that aid on fiscal grounds. The message offered them a symbol of corruption at a time of economic hardship. It started on a YouTube account with 132 subscribers, was picked up by two near-identical proxy news sites, then by large social media accounts, and finally reached the floor of the US House of Representatives. By then a reader was four steps removed from the original author. The yachts were still for sale.
 
+{% include laundering.html %}
+
 The same case shows the limits of disinformation. Some of the people it reached repeated it, some borrowed its imagery, and some rejected it outright.
 
 {% include quote.html id="omnipotence" %}
@@ -91,11 +94,7 @@ What works is education: media literacy, critical thinking, and pre-bunking, whe
 
 A simple tool anyone can use is SCAME, a longstanding US Army method for analyzing a piece of information.
 
-- **Source.** Does the author have a noted bias or conflict of interest?
-- **Content.** Do the facts and wording seem too good to be true, emotional, or designed to guide me to a conclusion?
-- **Audience.** Does this seem to cater to a specific community or type of person?
-- **Media.** Am I only seeing this on certain platforms, used mainly by certain audiences?
-- **Effect.** Is there an obvious reaction to it, or are people using it in a certain way?
+{% include scame.html %}
 
 Most of what we come across is not disinformation, but most of it is still trying to influence us. Give every source the same standard of scrutiny, even the sources you like and trust. Notice when emotion is playing a part in a decision, and take a step back.
 

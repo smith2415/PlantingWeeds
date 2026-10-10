@@ -1,0 +1,12 @@
+<figure class="chain-figure">
+<ol class="chain">
+{%- for node in site.data.laundering %}
+<li class="chain__node{% if forloop.first %} chain__node--origin{% endif %}{% if forloop.last %} chain__node--reader{% endif %}">
+<p class="chain__layer">{{ node.layer }}</p>
+<p class="chain__name">{{ node.name }}</p>
+<p class="chain__note">{{ node.note }}</p>
+</li>
+{%- endfor %}
+</ol>
+<figcaption>How the yacht story was laundered, as traced in <cite>Planting Weeds</cite>, p. 17. Each layer hides where the story came from a little more.</figcaption>
+</figure>

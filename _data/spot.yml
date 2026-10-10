@@ -1,4 +1,7 @@
-# The five steps of the "Can you spot disinformation?" slider on the Home page.
+# The "Can you spot disinformation?" slider on the Home page.
+#
+# Each scenario is one invented lie told at five levels, from Obvious to
+# Devious. Visitors pick a scenario, then move the slider through its steps.
 #
 # Everything here is invented for teaching. The outlets, organizations and
 # people do not exist. Keep it that way: never name a real outlet or person.
@@ -7,87 +10,169 @@
 #        brief = an official-looking report
 #        news  = a newspaper article
 #
-# image_src / image_alt add a picture to a post. Keep a visible
-# "AI image generated" label in the image itself.
+# image_src / image_alt / image_width / image_height add a picture to a step.
+# Keep a visible "AI image generated" label in the image itself.
+# image (without _src) shows a labelled placeholder box instead.
 #
 # tells_label is optional. It replaces the default "What makes this work"
 # heading on that step.
-- level: Obvious
-  kind: post
-  source: "@WakeUpLA_4471"
-  source_note: "Anonymous account, joined this month"
-  body:
-    - "ALIENS LANDED IN DOWNTOWN LA LAST NIGHT!!! Hundreds of people saw it. The government is HIDING IT. Share this before it gets deleted!!!"
-  tells_label: "Why this could work"
-  tells:
-    - "No source and no evidence, for a claim anyone downtown could disprove by looking out of a window. That does not make it harmless."
-    - "It may be one of hundreds of posts pushed out at once. In this shotgun approach, the person behind it does not need any single post to work. They only need a few to stick."
-    - "Even a post nobody believes can be useful: it tests which wording and which audiences get a reaction, and it adds noise that makes real reporting harder to find."
-    - "“Share this before it gets deleted” is the working part. It asks you to pass the post on before you have thought about it."
+- id: palm-trees
+  title: "Palm trees"
+  steps:
+    - level: Obvious
+      kind: post
+      source: "@WakeUpLA_4471"
+      source_note: "Anonymous account, joined this month"
+      body:
+        - "ALIENS LANDED IN DOWNTOWN LA LAST NIGHT!!! Hundreds of people saw it. The government is HIDING IT. Share this before it gets deleted!!!"
+      tells_label: "Why this could work"
+      tells:
+        - "No source and no evidence, for a claim anyone downtown could disprove by looking out of a window. That does not make it harmless."
+        - "It may be one of hundreds of posts pushed out at once. In this shotgun approach, the person behind it does not need any single post to work. They only need a few to stick."
+        - "Even a post nobody believes can be useful: it tests which wording and which audiences get a reaction, and it adds noise that makes real reporting harder to find."
+        - "“Share this before it gets deleted” is the working part. It asks you to pass the post on before you have thought about it."
 
-- level: Suspicious
-  kind: post
-  source: "Dana R."
-  source_note: "Posted in a neighborhood group"
-  body:
-    - "Not trying to start anything, but my cousin works for the city and says every palm tree downtown is coming out next month. They aren't telling anyone until it's done. I'm just a mom who loves this city and thought you should know."
-  tells:
-    - "Plain folk: the writer presents herself as a neighbor with nothing to gain, so the claim arrives with in-group trust already attached."
-    - "Testimonial: the only evidence is an unnamed cousin. You cannot check the cousin, and you are not meant to."
-    - "The claim has shrunk from impossible to merely surprising, which is all it needs to get repeated."
+    - level: Suspicious
+      kind: post
+      source: "Dana R."
+      source_note: "Posted in a neighborhood group"
+      body:
+        - "Not trying to start anything, but my cousin works for the city and says every palm tree downtown is coming out next month. They aren't telling anyone until it's done. I'm just a mom who loves this city and thought you should know."
+      tells:
+        - "Plain folk: the writer presents herself as a neighbor with nothing to gain, so the claim arrives with in-group trust already attached."
+        - "Testimonial: the only evidence is an unnamed cousin. You cannot check the cousin, and you are not meant to."
+        - "The claim has shrunk from impossible to merely surprising, which is all it needs to get repeated."
 
-- level: Plausible
-  kind: post
-  source: "LA Street Watch"
-  source_note: "“Independent news” account"
-  body:
-    - "BREAKING: A leaked city memo shows $4.2 million in storm relief money was spent on new palm trees for downtown, while Eastside streets still flood. Independent journalists have confirmed the document. Your money. Their priorities."
-  image_src: /assets/img/spot-leaked-memo.webp
-  image_alt: "Photo of a creased memo on an office desk, headed City of Los Angeles with the city seal, Inter-Office Memorandum, from the Office of the City Administrator to the Department of Public Works, dated October 26, 2023. It says $4,200,000 from the Emergency Storm Relief Fund is authorized for ornamental palm trees downtown. A small red stamp in the corner reads: AI image generated for academic use only."
-  tells:
-    - "Targeted: it is written for people who are already angry about flooding and city spending."
-    - "Convenient: if it were true, it would be the perfect talking point for what that audience already believes."
-    - "Emotional: money meant for people in need, spent on decoration. The story is built to make you angry enough to skip the checking."
-    - "Transfer: “independent journalists” lend authority without a single name you could look up. The precise figure does the same job."
+    - level: Plausible
+      kind: post
+      source: "LA Street Watch"
+      source_note: "“Independent news” account"
+      body:
+        - "BREAKING: A leaked city memo shows $4.2 million in storm relief money was spent on new palm trees for downtown, while Eastside streets still flood. Independent journalists have confirmed the document. Your money. Their priorities."
+      image_src: /assets/img/spot-leaked-memo.webp
+      image_alt: "Photo of a creased memo on an office desk, headed City of Los Angeles with the city seal, Inter-Office Memorandum, from the Office of the City Administrator to the Department of Public Works, dated October 26, 2023. It says $4,200,000 from the Emergency Storm Relief Fund is authorized for ornamental palm trees downtown. A small red stamp in the corner reads: AI image generated for academic use only."
+      tells:
+        - "Targeted: it is written for people who are already angry about flooding and city spending."
+        - "Convenient: if it were true, it would be the perfect talking point for what that audience already believes."
+        - "Emotional: money meant for people in need, spent on decoration. The story is built to make you angry enough to skip the checking."
+        - "Transfer: “independent journalists” lend authority without a single name you could look up. The precise figure does the same job."
 
-- level: Polished
-  kind: brief
-  source: "Harbor Gate Civic Research Center"
-  source_note: "Policy brief"
-  headline: "Relief Funds, Ornamental Priorities: A Review of Downtown Spending"
-  body:
-    - "A review of recently surfaced municipal documents indicates that approximately $4.2 million in storm relief money was redirected to ornamental landscaping in the downtown core.<sup>1</sup>"
-    - "While the city did approve a downtown tree-planting program last year, the scale of the diversion raises serious questions about oversight. Residents of flood-prone Eastside neighborhoods have yet to see comparable investment."
-  citations:
-    - "LA Street Watch, “Leaked city memo,” social media post."
-  tells:
-    - "Laundering: follow the footnote. The only source is the post from the previous step, now wearing a letterhead."
-    - "A kernel of truth: a real, dull fact (a tree-planting program) anchors the invented one."
-    - "The tone has gone calm. “Indicates” and “raises serious questions” sound careful while asserting exactly the same claim."
-    - "The phrase “$4.2 million in storm relief money” has travelled word for word. Repeated wording like this is how a campaign can be traced back to its origin."
+    - level: Polished
+      kind: brief
+      source: "Harbor Gate Civic Research Center"
+      source_note: "Policy brief"
+      headline: "Relief Funds, Ornamental Priorities: A Review of Downtown Spending"
+      body:
+        - "A review of recently surfaced municipal documents indicates that approximately $4.2 million in storm relief money was redirected to ornamental landscaping in the downtown core.<sup>1</sup>"
+        - "While the city did approve a downtown tree-planting program last year, the scale of the diversion raises serious questions about oversight. Residents of flood-prone Eastside neighborhoods have yet to see comparable investment."
+      citations:
+        - "LA Street Watch, “Leaked city memo,” social media post."
+      tells:
+        - "Laundering: follow the footnote. The only source is the post from the previous step, now wearing a letterhead."
+        - "A kernel of truth: a real, dull fact (a tree-planting program) anchors the invented one."
+        - "The tone has gone calm. “Indicates” and “raises serious questions” sound careful while asserting exactly the same claim."
+        - "The phrase “$4.2 million in storm relief money” has travelled word for word. Repeated wording like this is how a campaign can be traced back to its origin."
 
-- level: Devious
-  kind: news
-  source: "The Southland Meridian"
-  source_note: "Los Angeles"
-  headline: "Storm relief money went to downtown palms, review finds"
-  byline: "By Marisol Ettinger, staff writer"
-  body:
-    - "LOS ANGELES. About $4.2 million in storm relief money was instead spent on palm trees and ornamental landscaping in the downtown core, according to a policy review released this week.<sup>1</sup>"
-    - "“We sandbagged our own street in February,” said Rosalind Ketteridge, 58, who has lived on the Eastside for three decades. “Then I see brand new palms going in downtown. Somebody decided that.”"
-    - "The review, by the Harbor Gate Civic Research Center, draws on a municipal memo first reported last month.<sup>2</sup> The city approved a downtown tree-planting program last year. A public works spokesperson did not respond to requests for comment by press time."
-    - "“This is a pattern, not an accident,” said Dr. Emil Vantongeren, a senior fellow at the center."
-  image_src: /assets/img/spot-meridian-interview.webp
-  image_width: 1100
-  image_height: 614
-  image_alt: "News broadcast still. A woman in a patterned cardigan stands by a chain-link fence on a residential street, speaking to a reporter holding a microphone and clipboard. Captions read: The Southland Meridian, Live TSM, Breaking News: Storm relief money spent on downtown palm trees."
-  image_caption: "Rosalind Ketteridge speaks to a Meridian reporter outside her Eastside home."
-  citations:
-    - "Harbor Gate Civic Research Center, “Relief Funds, Ornamental Priorities.”"
-    - "LA Street Watch, social media post."
-  tells:
-    - "Follow the citations. The first is the brief from step 4 and the second is the post from step 3. Four layers deep, there is still only one anonymous account."
-    - "Named people with ages, streets and sandbags feel real. Neither of them can be found anywhere else, and a convincing face can be generated in seconds."
-    - "“Did not respond by press time” implies someone was asked, and lets silence read as guilt."
-    - "Nothing here is shouting. The anger now arrives through a sympathetic neighbor, so it feels like your own conclusion."
-    - "By now it can be shared by people you trust who have no idea where it started."
+    - level: Devious
+      kind: news
+      source: "The Southland Meridian"
+      source_note: "Los Angeles"
+      headline: "Storm relief money went to downtown palms, review finds"
+      byline: "By Marisol Ettinger, staff writer"
+      body:
+        - "LOS ANGELES. About $4.2 million in storm relief money was instead spent on palm trees and ornamental landscaping in the downtown core, according to a policy review released this week.<sup>1</sup>"
+        - "“We sandbagged our own street in February,” said Rosalind Ketteridge, 58, who has lived on the Eastside for three decades. “Then I see brand new palms going in downtown. Somebody decided that.”"
+        - "The review, by the Harbor Gate Civic Research Center, draws on a municipal memo first reported last month.<sup>2</sup> The city approved a downtown tree-planting program last year. A public works spokesperson did not respond to requests for comment by press time."
+        - "“This is a pattern, not an accident,” said Dr. Emil Vantongeren, a senior fellow at the center."
+      image_src: /assets/img/spot-meridian-interview.webp
+      image_width: 1100
+      image_height: 614
+      image_alt: "News broadcast still. A woman in a patterned cardigan stands by a chain-link fence on a residential street, speaking to a reporter holding a microphone and clipboard. Captions read: The Southland Meridian, Live TSM, Breaking News: Storm relief money spent on downtown palm trees."
+      image_caption: "Rosalind Ketteridge speaks to a Meridian reporter outside her Eastside home."
+      citations:
+        - "Harbor Gate Civic Research Center, “Relief Funds, Ornamental Priorities.”"
+        - "LA Street Watch, social media post."
+      tells:
+        - "Follow the citations. The first is the brief from step 4 and the second is the post from step 3. Four layers deep, there is still only one anonymous account."
+        - "Named people with ages, streets and sandbags feel real. Neither of them can be found anywhere else, and a convincing face can be generated in seconds."
+        - "“Did not respond by press time” implies someone was asked, and lets silence read as guilt."
+        - "Nothing here is shouting. The anger now arrives through a sympathetic neighbor, so it feels like your own conclusion."
+        - "By now it can be shared by people you trust who have no idea where it started."
+
+- id: fuel
+  title: "Fuel shortage"
+  steps:
+    - level: Obvious
+      kind: post
+      source: "@TruthPatriotSoCal"
+      source_note: "Anonymous account, joined this week"
+      body:
+        - "EVERY GAS STATION IN SOCAL SHUTS DOWN FRIDAY!!! Fill every can you own TONIGHT. They don't want you to know until it's too late!!!"
+      tells_label: "Why this could work"
+      tells:
+        - "Absurd on its face, and still capable of doing damage. This kind of rumor can make itself come true."
+        - "If even a few hundred people believe it and rush to fill up, real lines form at real stations. Those lines then become the evidence for the next, more believable version."
+        - "“Until it's too late” turns doubt into risk: checking feels like wasting time you could spend in line."
+
+    - level: Suspicious
+      kind: post
+      source: "Mike T."
+      source_note: "Posted in a neighborhood group"
+      body:
+        - "My brother-in-law drives a fuel tanker. He says the refinery is down and deliveries stop this week. Not trying to scare anyone, just passing it along. I filled up tonight to be safe."
+      tells:
+        - "Plain folk and testimonial: a neighbor with an insider relative, offering a tip rather than a claim."
+        - "“To be safe” makes acting on it feel sensible whether or not it's true. That is how a rumor spreads without anyone fully believing it."
+        - "There is nothing to check. Which refinery? Which deliveries? The vagueness is the point."
+
+    - level: Plausible
+      kind: post
+      source: "SoCal Fuel Watch"
+      source_note: "“Industry news” account"
+      body:
+        - "BREAKING: Refinery outage confirmed. Industry insiders say Southern California has roughly four days of fuel left. Lines are already forming across the South Bay. Fill up while you can."
+      image: "A photo of a long line of cars at a gas station would go here. In a real campaign it could be a genuine photo of the lines the rumor caused"
+      tells:
+        - "Targeted at drivers who already distrust fuel prices and supply. Convenient for anyone who expects the worst. Emotional: fear of being stranded."
+        - "Transfer: “industry insiders” and “confirmed”, with nobody named and nothing linked."
+        - "The precise “roughly four days” sounds measured. It is the phrase to watch: it will travel word for word."
+        - "The photo may be completely real. The lines the earlier rumors created are now presented as proof of the shortage."
+
+    - level: Polished
+      kind: brief
+      source: "Westshore Energy Policy Forum"
+      source_note: "Market note"
+      headline: "Supply Risk in the Southern California Fuel Market"
+      body:
+        - "Reports of an unplanned refinery outage have raised concern that the region may hold roughly four days of fuel supply.<sup>1</sup> Widespread queuing at retail stations across the South Bay suggests demand has already begun to outstrip deliveries.<sup>2</sup>"
+        - "While regional supply chains have historically absorbed short disruptions, the current situation warrants close monitoring by consumers and policymakers alike."
+      citations:
+        - "SoCal Fuel Watch, “Refinery outage confirmed,” social media post."
+        - "SoCal Fuel Watch, photo of station queues, social media post."
+      tells:
+        - "Laundering: both footnotes lead to the same anonymous account from step 3."
+        - "“Roughly four days” has arrived word for word."
+        - "Real lines are used as evidence of a real shortage. They are evidence of a real rumor."
+        - "A generic truth (“supply chains have historically absorbed short disruptions”) makes the note sound balanced while it repeats the claim."
+
+    - level: Devious
+      kind: news
+      source: "The Southland Meridian"
+      source_note: "Los Angeles"
+      headline: "Drivers wait hours as fuel fears grip Southern California"
+      byline: "By Daniel Okafor-Reyes, staff writer"
+      body:
+        - "LOS ANGELES. Lines stretched for blocks at gas stations across the South Bay on Thursday as drivers raced to fill up amid reports that the region could run short of fuel within days.<sup>1</sup>"
+        - "“I waited two hours, and the pump ran dry three cars ahead of me,” said Teresa Halvorsen, 44, a home health aide who drives between patients. “I can't do my job without gas.”"
+        - "An energy policy group said reports of a refinery outage had raised concern that the region holds roughly four days of supply.<sup>2</sup>"
+        - "A state energy spokesperson said Thursday evening that fuel supplies remain within normal ranges and urged drivers not to buy more than they need."
+      image: "A photo of a long line of cars at a gas station would go here. In this story the lines are real"
+      image_caption: "Drivers wait to fill up at a station in the South Bay."
+      citations:
+        - "Station operators, interviews."
+        - "Westshore Energy Policy Forum, “Supply Risk in the Southern California Fuel Market.”"
+      tells:
+        - "Everything in the first two paragraphs may be true. The lines are real, the empty pump is real, and the frustration is real. The rumor caused them."
+        - "Follow the second citation: it leads to the market note from step 4, which leads to the anonymous account from step 3."
+        - "The only statement that supply is normal sits at the end, where most readers never get to."
+        - "This is the effect in SCAME. A story can matter because of what it makes people do, even when nobody can prove who started it."

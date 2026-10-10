@@ -1,8 +1,16 @@
-{%- assign total = site.data.spot | size -%}
+{%- assign first = site.data.spot | first -%}
+{%- assign total = first.steps | size -%}
 <section class="spot" id="spot" aria-labelledby="spot-title">
 <div class="wrap">
 <h2 id="spot-title">Can you spot disinformation?</h2>
-<p>Here is one lie, told five ways. Move from Obvious to Devious and watch the same story get harder to dismiss. Every example is made up.</p>
+<p>Each story here is one lie, told five ways. Pick a story, then move from Obvious to Devious and watch it get harder to dismiss. Every example is made up.</p>
+<fieldset class="spot__stories" hidden>
+<legend>Choose a story</legend>
+{%- for scenario in site.data.spot %}
+<input type="radio" name="spot-story" id="story-{{ scenario.id }}" value="{{ scenario.id }}"{% if forloop.first %} checked{% endif %}>
+<label for="story-{{ scenario.id }}">{{ scenario.title }}</label>
+{%- endfor %}
+</fieldset>
 <div class="spot__control" hidden>
 <label for="spot-range" class="visually-hidden">How devious? Step 1 is obvious, step {{ total }} is devious.</label>
 <span class="spot__end" aria-hidden="true">Obvious</span>
@@ -10,10 +18,14 @@
 <span class="spot__end spot__end--far" aria-hidden="true">Devious</span>
 </div>
 <p class="spot__status" aria-live="polite" hidden></p>
+{%- for scenario in site.data.spot %}
+{%- assign total = scenario.steps | size %}
+<div class="spot__scenario" id="scenario-{{ scenario.id }}" data-scenario="{{ scenario.id }}">
+<h3 class="spot__scenario-title">Story: {{ scenario.title }}</h3>
 <ol class="spot__list">
-{%- for item in site.data.spot %}
+{%- for item in scenario.steps %}
 <li class="spot__step" data-level="{{ item.level }}">
-<h3 class="spot__level">Step {{ forloop.index }} of {{ total }}: {{ item.level }}</h3>
+<h4 class="spot__level">Step {{ forloop.index }} of {{ total }}: {{ item.level }}</h4>
 <div class="specimen specimen--{{ item.kind }}">
 <p class="specimen__flag">Fabricated example. None of this happened.</p>
 <div class="specimen__body">
@@ -62,6 +74,8 @@
 </li>
 {%- endfor %}
 </ol>
-<p class="spot__after">The way to check any of these is the same. See <a href="{{ '/about/#pulling-weeds' | relative_url }}">Pulling weeds</a> on the About page.</p>
+</div>
+{%- endfor %}
+<p class="spot__after">The way to check any of these is the same. Try the SCAME checklist under <a href="{{ '/about/#pulling-weeds' | relative_url }}">Pulling weeds</a> on the About page.</p>
 </div>
 </section>

@@ -1,0 +1,19 @@
+{%- assign total = site.data.scame | size -%}
+<form class="scame" id="scame" aria-labelledby="scame-title" data-total="{{ total }}">
+<fieldset>
+<legend id="scame-title">Run SCAME on something you've seen</legend>
+<p class="scame__hint">Think of a post, article or video. Tick each question you answer “yes” to.</p>
+<ul class="scame__list">
+{%- for q in site.data.scame %}
+<li>
+<input type="checkbox" id="scame-{{ q.letter | downcase }}" name="scame" value="{{ q.letter }}">
+<label for="scame-{{ q.letter | downcase }}"><span class="scame__letter" aria-hidden="true">{{ q.letter }}</span><span><strong>{{ q.name }}.</strong> {{ q.question }}</span></label>
+</li>
+{%- endfor %}
+</ul>
+<div class="scame__footer" hidden>
+<p class="scame__result" aria-live="polite">No flags yet.</p>
+<button type="reset" class="scame__reset">Clear</button>
+</div>
+</fieldset>
+</form>
