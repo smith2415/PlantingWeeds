@@ -240,12 +240,12 @@ li {
 .site-footer {
   border-top: 1px solid var(--rule);
   padding: 1.75rem 0 3rem;
-  font-size: 0.95rem;
+  font-size: 0.91rem;
   color: var(--muted);
 }
 .site-footer .nav {
   margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 0.91rem;
 }
 .site-footer p {
   margin-bottom: 0.5rem;
