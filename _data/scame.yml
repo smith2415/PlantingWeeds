@@ -1,16 +1,45 @@
-# The SCAME checklist on the About page ({% include scame.html %}).
-- letter: "S"
-  name: "Source"
-  question: "Does the author have a noted bias or conflict of interest?"
-- letter: "C"
-  name: "Content"
-  question: "Do the facts and wording seem too good to be true, emotional, or designed to guide me to a conclusion?"
-- letter: "A"
-  name: "Audience"
-  question: "Does this seem to cater to a specific community or type of person?"
-- letter: "M"
-  name: "Media"
-  question: "Am I only seeing this on certain platforms, used mainly by certain audiences?"
-- letter: "E"
-  name: "Effect"
-  question: "Is there an obvious reaction to it, or are people using it in a certain way?"
+# The SCAME worksheet on the About page ({% include scame.html %}).
+#
+# SCAME is a method for analysis, not a test to pass or fail. Almost any
+# piece of media will touch every step. The point is to work through it and
+# arrive at what the information is trying to do, and who benefits.
+steps:
+  - letter: "S"
+    name: "Source"
+    look_at: "the author and the physical source of the information"
+    question: "Who made this, and where did it really come from? Does the author have a noted bias or conflict of interest? If it cites someone, where does that trail lead?"
+  - letter: "C"
+    name: "Content"
+    look_at: "the actual content of the information"
+    question: "What does it say, and how? Do the facts and wording seem too good to be true, emotional, or designed to guide me to a conclusion?"
+  - letter: "A"
+    name: "Audience"
+    look_at: "the intended target audience"
+    question: "Who is this written for? Does it seem to cater to a specific community or type of person, and what do they already believe?"
+  - letter: "M"
+    name: "Media"
+    look_at: "the media platforms and the way the information was spread"
+    question: "Where am I seeing it, and how did it get here? Is it only on certain platforms, used mainly by certain audiences? Are the same phrases repeated word for word?"
+  - letter: "E"
+    name: "Effect"
+    look_at: "the actual effect of the information"
+    question: "What is happening because of it? Is there an obvious reaction, or are people using it in a certain way?"
+
+synthesis:
+  - "What does it want its audience to believe or do?"
+  - "Who benefits if they do?"
+  - "Does that point to ordinary persuasion, or to someone hiding their hand: an adversary, or even a supporter?"
+
+# A worked example, using step 5 of the palm-tree story on the Home page.
+example:
+  title: "Step 5 of the palm-tree story"
+  steps:
+    - "A staff writer at the Southland Meridian. The article's sources are a policy brief and an anonymous social media post, and the brief's only source is that same post."
+    - "A precise figure, a sympathetic resident with sandbags, one true detail (the tree program) and a city that “did not respond”. Every part pushes toward one conclusion: money meant for flood victims was wasted."
+    - "Residents already worried about flooding and about how the city spends money."
+    - "An anonymous post, then a research center, then a newspaper. The phrase “$4.2 million in storm relief money” appears word for word at every stage."
+    - "Anger at city leadership, calls to audit or cut spending, and people sharing it with neighbors."
+  synthesis:
+    - "That the city cannot be trusted with relief money, and that someone should pay for it."
+    - "Anyone who wants local leaders discredited, or the public angry and divided."
+    - "Laundered through layers back to a single anonymous account. Someone wanted the message spread without their name on it."

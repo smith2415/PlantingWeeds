@@ -1,19 +1,38 @@
-{%- assign total = site.data.scame | size -%}
-<form class="scame" id="scame" aria-labelledby="scame-title" data-total="{{ total }}">
+{%- assign scame = site.data.scame -%}
+<form class="scame" id="scame" aria-labelledby="scame-title">
 <fieldset>
-<legend id="scame-title">Run SCAME on something you've seen</legend>
-<p class="scame__hint">Think of a post, article or video. Tick each question you answer “yes” to.</p>
-<ul class="scame__list">
-{%- for q in site.data.scame %}
-<li>
-<input type="checkbox" id="scame-{{ q.letter | downcase }}" name="scame" value="{{ q.letter }}">
-<label for="scame-{{ q.letter | downcase }}"><span class="scame__letter" aria-hidden="true">{{ q.letter }}</span><span><strong>{{ q.name }}.</strong> {{ q.question }}</span></label>
+<legend id="scame-title">Work through SCAME on something you've seen</legend>
+<p class="scame__hint">Pick a post, article or video. There are no right answers and nothing is scored or saved: almost anything will touch every step. The aim is to see past the message to its motivation.</p>
+<ol class="scame__steps">
+{%- for q in scame.steps %}
+<li class="scame__step">
+<p class="scame__head"><span class="scame__letter" aria-hidden="true">{{ q.letter }}</span><span class="scame__name">{{ q.name }}</span></p>
+<p class="scame__look">Look at {{ q.look_at }}.</p>
+<label for="scame-{{ q.letter | downcase }}">{{ q.question }}</label>
+<textarea id="scame-{{ q.letter | downcase }}" name="{{ q.name | downcase }}" rows="2"></textarea>
 </li>
 {%- endfor %}
-</ul>
-<div class="scame__footer" hidden>
-<p class="scame__result" aria-live="polite">No flags yet.</p>
-<button type="reset" class="scame__reset">Clear</button>
+</ol>
+<div class="scame__synthesis">
+<p class="scame__synthesis-title">Put it together</p>
+{%- for s in scame.synthesis %}
+<label for="scame-sum-{{ forloop.index }}">{{ s }}</label>
+<textarea id="scame-sum-{{ forloop.index }}" name="synthesis-{{ forloop.index }}" rows="2"></textarea>
+{%- endfor %}
 </div>
+<button type="reset" class="scame__reset">Clear my notes</button>
 </fieldset>
 </form>
+<details class="scame-example">
+<summary>See it worked through: {{ scame.example.title }}</summary>
+<dl>
+{%- for q in scame.steps %}
+<dt>{{ q.name }}</dt>
+<dd>{{ scame.example.steps[forloop.index0] }}</dd>
+{%- endfor %}
+{%- for s in scame.synthesis %}
+<dt>{{ s }}</dt>
+<dd>{{ scame.example.synthesis[forloop.index0] }}</dd>
+{%- endfor %}
+</dl>
+</details>

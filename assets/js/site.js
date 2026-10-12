@@ -1,9 +1,8 @@
 /* Planting Weeds: the only JavaScript on the site.
    1. Turns the "spot disinformation" stories into a story picker and slider.
    2. Loads a PDF preview only when its title is opened.
-   3. Counts the flags ticked in the SCAME checklist.
    Without JavaScript, every story and step is shown in order, each document
-   keeps its download link, and the checklist can still be ticked. */
+   keeps its download link. */
 (function () {
   "use strict";
 
@@ -65,30 +64,6 @@
       frame.title = "Preview of " + this.querySelector(".doc__title").textContent;
       var holder = this.querySelector(".doc__frame");
       holder.insertBefore(frame, holder.firstChild);
-    });
-  }
-
-  var scame = document.getElementById("scame");
-  if (scame) {
-    var boxes = scame.querySelectorAll('input[type="checkbox"]');
-    var result = scame.querySelector(".scame__result");
-    var total = boxes.length;
-    var count = function () {
-      var n = 0;
-      for (var k = 0; k < boxes.length; k++) {
-        if (boxes[k].checked) {
-          n++;
-        }
-      }
-      result.textContent = n === 0
-        ? "No flags yet."
-        : "You flagged " + n + " of " + total + ". Each flag is a reason to slow down and check before you share.";
-      scame.classList.toggle("has-flags", n > 0);
-    };
-    scame.querySelector(".scame__footer").hidden = false;
-    scame.addEventListener("change", count);
-    scame.addEventListener("reset", function () {
-      setTimeout(count, 0);
     });
   }
 })();

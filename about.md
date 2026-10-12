@@ -5,7 +5,6 @@ permalink: /about/
 heading: About
 lede: >-
   How I think about mis- and disinformation, and what we can do about it.
-scripts: true
 description: >-
   Austin Schmid's philosophy on countering mis- and disinformation: what it is,
   why it works, how it spreads, and how to pull it out.
@@ -92,7 +91,7 @@ Confronting disinformation is uncomfortable. Going against the grain is hard eve
 
 What works is education: media literacy, critical thinking, and pre-bunking, where proof of disinformation attempts and known actors is published before a campaign can strike.
 
-A simple tool anyone can use is SCAME, a longstanding US Army method for analyzing a piece of information.
+A simple tool anyone can use is SCAME (Source, Content, Audience, Media, Effect), a longstanding US Army method for deliberate analysis. It is not a test that information passes or fails. It is a way of looking critically at something until you can see the motivation underneath it, and whether that points to someone malicious, a clear adversary, or even a supporter.
 
 {% include scame.html %}
 

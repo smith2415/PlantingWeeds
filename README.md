@@ -27,13 +27,13 @@ two later.
 | Pull quotes | `_data/quotes.yml` |
 | The slider stories (each with five steps) | `_data/spot.yml` |
 | The laundering chain diagram | `_data/laundering.yml` |
-| The SCAME checklist questions | `_data/scame.yml` |
+| The SCAME worksheet and worked example | `_data/scame.yml` |
 | The documents and their descriptions | `_data/documents.yml`, PDFs in `assets/docs/` |
 | Header and footer links | `_data/navigation.yml` |
 | Site title, description, address | `_config.yml` |
 | Page templates | `_layouts/`, `_includes/` |
 | Colors, fonts, spacing | `assets/css/site.css` (variables at the top) |
-| Slider, PDF preview and checklist script | `assets/js/site.js` |
+| Slider and PDF preview script | `assets/js/site.js` |
 
 Content lives in Markdown and `_data` files. Design lives in `_layouts`,
 `_includes` and `assets/css`. You can change one without touching the other.

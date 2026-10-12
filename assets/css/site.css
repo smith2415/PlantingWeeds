@@ -738,12 +738,13 @@ li {
   max-width: 40rem;
 }
 
-/* SCAME checklist */
+/* SCAME worksheet: a method for analysis, so open notes rather than
+   checkboxes or a score. */
 .scame fieldset {
   border: 2px solid var(--ink);
   border-radius: 0.4rem;
   background: var(--surface);
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.5rem 0 1rem;
   padding: 1rem 1.1rem 1.1rem;
 }
 .scame legend {
@@ -763,34 +764,23 @@ li {
 .scame__hint {
   font-size: 1rem;
   color: var(--muted);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
-.scame__list {
+.scame__steps {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.scame__list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-  padding: 0.55rem 0;
-  border-top: 1px solid var(--rule);
+.scame__step {
   margin: 0;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--rule);
 }
-.scame__list input {
-  flex: none;
-  width: 1.3rem;
-  height: 1.3rem;
-  margin: 0.25rem 0 0;
-  accent-color: var(--devious);
-  cursor: pointer;
-}
-.scame__list label {
+.scame__head {
   display: flex;
-  gap: 0.7rem;
-  cursor: pointer;
-  font-size: 1.02rem;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.2rem;
 }
 .scame__letter {
   flex: none;
@@ -805,25 +795,50 @@ li {
   font-weight: 700;
   line-height: 1;
 }
-.scame__list input:checked + label .scame__letter {
-  background: var(--devious);
-  color: var(--paper);
-}
-.scame__footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem 1rem;
-  border-top: 1px solid var(--rule);
-  padding-top: 0.8rem;
-}
-.scame__footer[hidden] {
-  display: none;
-}
-.scame__result {
-  margin: 0;
+.scame__name {
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
   font-weight: 600;
+  font-size: 1.15rem;
+}
+.scame__look {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+.scame label {
+  display: block;
+  font-size: 1.02rem;
+  margin-bottom: 0.4rem;
+}
+.scame textarea {
+  display: block;
+  width: 100%;
+  min-height: 3.2rem;
+  resize: vertical;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--muted);
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.65rem;
+}
+.scame__synthesis {
+  border-top: 2px solid var(--ink);
+  padding-top: 0.9rem;
+  margin-bottom: 1rem;
+}
+.scame__synthesis-title {
+  font-family: var(--display);
+  font-variation-settings: "WONK" 1;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+.scame__synthesis textarea {
+  margin-bottom: 0.9rem;
 }
 .scame__reset {
   font: inherit;
@@ -834,6 +849,24 @@ li {
   background: transparent;
   color: var(--ink);
   cursor: pointer;
+}
+.scame-example {
+  border-left: 0.3rem solid var(--dandelion);
+  padding-left: 1rem;
+  margin-bottom: 1.8rem;
+}
+.scame-example summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+.scame-example dt {
+  font-weight: 600;
+  margin-top: 0.7rem;
+}
+.scame-example dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.02rem;
 }
 
 /* Placeholders: anything not yet supplied is marked, never invented. */
