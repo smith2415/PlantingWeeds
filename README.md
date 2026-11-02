@@ -22,6 +22,7 @@ two later.
 | --- | --- |
 | Home page text | `index.md` |
 | About page text | `about.md` |
+| InfoTracer page text | `infotracer.md`; its address is `infotracer_url` in `_config.yml` |
 | Work experience entries | `_data/experience.yml` |
 | Contact details | `_data/contact.yml` |
 | Pull quotes | `_data/quotes.yml` |
@@ -124,8 +125,9 @@ Scores from a local build at the time of writing (mobile emulation):
   and has no trackers.
 - **Light and dark themes** follow the visitor's device setting using CSS
   variables. No theme switcher, no stored preference.
-- **JavaScript is one small file** used for the slider and for loading a PDF
-  preview only when it is opened. Without JavaScript all five slider steps
+- **JavaScript is one small file** used for the slider, for loading a PDF
+  preview only when it is opened, and for loading InfoTracer only when it is
+  opened. Without JavaScript all five slider steps
   are shown in order and each document keeps its download link.
 - **The fabricated examples are labelled.** Every slider example carries a
   "Fabricated example" label, and the outlets and people in them are invented.

@@ -18,6 +18,10 @@ baseurl:
 
 repository: smith2415/PlantingWeeds
 
+# InfoTracer, the claim-tracing tool shown on the InfoTracer page. It runs on
+# Replit; this is its address.
+infotracer_url: "https://info-tracer.replit.app"
+
 permalink: pretty
 markdown: kramdown
 
