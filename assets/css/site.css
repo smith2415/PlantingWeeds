@@ -398,12 +398,30 @@ li {
   margin-top: 1.5rem;
   margin-bottom: 2.75rem;
 }
-.app-embed__preview[open] .when-closed,
-.app-embed__preview:not([open]) .when-open {
-  display: none;
+/* The frame sits on top of the "Starting InfoTracer" note, which shows only
+   until InfoTracer's own page (with its own background) covers it. The
+   fixed height keeps the page from jumping when it loads. No sandbox
+   attribute on the frame: InfoTracer refuses forms from sandboxed frames. */
+.app-embed__frame {
+  position: relative;
+  height: min(85vh, 56rem);
+  border: 1px solid var(--rule);
+  border-radius: 0.35rem;
+  overflow: hidden;
+  background: var(--surface);
 }
 .app-embed__frame iframe {
-  height: min(85vh, 56rem);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.app-embed__waiting {
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  color: var(--muted);
+  font-style: italic;
 }
 .app-embed .doc__actions {
   margin-top: 1.1rem;

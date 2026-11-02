@@ -1,9 +1,8 @@
 /* Planting Weeds: the only JavaScript on the site.
    1. Turns the five "spot disinformation" steps into a slider.
    2. Loads a PDF preview only when its title is opened.
-   3. Loads InfoTracer on its page only when it is opened.
-   Without JavaScript, all five steps are shown in order, each document
-   still has its download link, and InfoTracer has its new-tab link. */
+   Without JavaScript, all five steps are shown in order and each document
+   still has its download link. */
 (function () {
   "use strict";
 
@@ -37,21 +36,6 @@
       var frame = document.createElement("iframe");
       frame.src = this.getAttribute("data-pdf");
       frame.title = "Preview of " + this.querySelector(".doc__title").textContent;
-      var holder = this.querySelector(".doc__frame");
-      holder.insertBefore(frame, holder.firstChild);
-    });
-  }
-
-  // No sandbox attribute: InfoTracer refuses forms from sandboxed frames.
-  var apps = document.querySelectorAll(".app-embed__preview");
-  for (var k = 0; k < apps.length; k++) {
-    apps[k].addEventListener("toggle", function () {
-      if (!this.open || this.querySelector("iframe")) {
-        return;
-      }
-      var frame = document.createElement("iframe");
-      frame.src = this.getAttribute("data-src");
-      frame.title = "InfoTracer";
       var holder = this.querySelector(".doc__frame");
       holder.insertBefore(frame, holder.firstChild);
     });
