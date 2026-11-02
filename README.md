@@ -122,12 +122,12 @@ Scores from a local build at the time of writing (mobile emulation):
   live and locally.
 - **Fonts are hosted in the repository** (Fraunces and Source Serif 4, both
   under the SIL Open Font License), so the site makes no third-party requests
-  and has no trackers.
+  and has no trackers. The one exception is the InfoTracer page, which loads
+  InfoTracer itself (hosted on Replit) in a frame.
 - **Light and dark themes** follow the visitor's device setting using CSS
   variables. No theme switcher, no stored preference.
-- **JavaScript is one small file** used for the slider, for loading a PDF
-  preview only when it is opened, and for loading InfoTracer only when it is
-  opened. Without JavaScript all five slider steps
+- **JavaScript is one small file** used for the slider and for loading a PDF
+  preview only when it is opened. Without JavaScript all five slider steps
   are shown in order and each document keeps its download link.
 - **The fabricated examples are labelled.** Every slider example carries a
   "Fabricated example" label, and the outlets and people in them are invented.
