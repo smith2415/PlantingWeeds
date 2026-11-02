@@ -390,6 +390,25 @@ li {
   gap: 0.6rem 1.2rem;
 }
 
+/* InfoTracer page: the tool, loaded only when opened */
+.content > .app-embed {
+  /* Centered like the text, but wider: the tool needs more room than a
+     paragraph does. */
+  max-width: calc(64rem + 2 * var(--gutter));
+  margin-top: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+.app-embed__preview[open] .when-closed,
+.app-embed__preview:not([open]) .when-open {
+  display: none;
+}
+.app-embed__frame iframe {
+  height: min(85vh, 56rem);
+}
+.app-embed .doc__actions {
+  margin-top: 1.1rem;
+}
+
 /* Can you spot disinformation? */
 .spot {
   padding: 0.5rem 0 1rem;
